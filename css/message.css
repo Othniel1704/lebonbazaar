@@ -1,0 +1,136 @@
+/* === Messagerie === */
+:root {
+    --primary-color: #ff5a5f;
+    --secondary-color: #008489;
+    --dark-color: #484848;
+    --light-color: #f7f7f7;
+}
+.messagerie {
+    width: 70%;
+    background: var(--light-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.messages-container {
+    height: 500px;
+    overflow-y: auto;
+    margin-bottom: 1.5rem;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+}
+
+.message {
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+    border-radius: 10px;
+    max-width: 70%;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.message:hover {
+    transform: translateX(5px);
+}
+
+.message.sent {
+    background-color: rgba(111, 182, 232, 0.43);
+    margin-left: auto;
+    border-radius: 15px 15px 0 15px;
+}
+
+.message.received {
+    background:rgb(0 0 0 / 17%) ;
+    border: 1px solid #eee;
+    border-radius: 15px 15px 15px 0;
+}
+
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.author {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.date {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.message-form textarea {
+    width: 100%;
+    padding: 1.2rem;
+    border: 2px solid #04239e;
+    border-radius: 8px;
+    resize: none;
+    min-height: 100px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.message-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.btn {
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #006669;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Barre de défilement */
+.messages-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.messages-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.messages-container::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .messagerie {
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .message {
+        max-width: 85%;
+    }
+    
+    .messages-container {
+        height: 400px;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
