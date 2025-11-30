@@ -1,0 +1,39 @@
+# Fichiers de configuration sensibles
+php/config.php
+config.php
+
+# Fichiers de base de données
+*.sql
+*.db
+*.sqlite
+
+# Fichiers d'environnement
+.env
+.env.local
+
+# Dossiers système
+.DS_Store
+Thumbs.db
+
+# Dossiers IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Fichiers temporaires
+tmp/
+temp/
+cache/
+
+# Images uploadées (optionnel - décommentez si vous ne voulez pas versionner les images)
+# image/
+# uploads/
+
+# Dépendances (si vous utilisez Composer)
+vendor/
+node_modules/
