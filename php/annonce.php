@@ -59,7 +59,6 @@ $check_stmt = $conn->prepare("SELECT COUNT(*) FROM annonce_visite WHERE  annonce
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <?php require 'navbar.php'; ?>
     
     <main class="annonce-detail-container">
         <!-- Left Column: Gallery & Description -->
